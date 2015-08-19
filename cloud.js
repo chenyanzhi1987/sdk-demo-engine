@@ -9,8 +9,6 @@ var errorFn = function (res) {
 	}
 };
 
-// Use AV.Cloud.define to define as many cloud functions as you want.
-// For example:
 AV.Cloud.define('hello', function(request, response) {
   response.success('Hello world!');
 });
@@ -52,6 +50,18 @@ AV.Cloud.define('fullObject', function (req, res) {
 	obj.save().then(function () {
 		res.success(obj._toFullJSON());
 	}, errorFn(res));
+});
+
+AV.Cloud.beforeSave('AVCloudTest', function (req, res) {
+	var string = req.object.get('string');
+	if (string) {
+		if (string.length > 10) {
+			req.object.set('string', string.substring(0, 10));
+		}
+		res.success();
+	} else {
+		res.success();
+	}
 });
 
 module.exports = AV.Cloud;
