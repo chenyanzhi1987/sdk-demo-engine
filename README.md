@@ -1,6 +1,6 @@
 ## sdk-demo-engine
 
-此项目用来展示云引擎和 SDK 的交互。需要结合 [LeanStorageDemo](https://github.com/leancloud/leancloud-demos) 里的云引擎示例来学习。可以学习到：
+此项目用来展示云引擎和 SDK 的交互。需要结合 [LeanStorageDemo](https://github.com/leancloud/LeanStorage-Demo) 里的云引擎示例来学习。可以学习到：
 
 * 如何撘一个简单的 LeanEngine 框架？
 * 如何定义云函数？
