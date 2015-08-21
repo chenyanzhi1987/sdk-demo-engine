@@ -10,15 +10,15 @@ var errorFn = function (res) {
 };
 
 AV.Cloud.define('hello', function(request, response) {
-  response.success('Hello world!');
+	response.success('Hello world!');
 });
 
 AV.Cloud.define('errorCode', function(req, res) {
-  AV.User.logIn('NoThisUser', 'lalala', {
-    error: function(user, err) {
-      res.error(err);
-    }
-  });
+	AV.User.logIn('NoThisUser', 'lalala', {
+		error: function(user, err) {
+			res.error(err);
+		}
+	});
 });
 
 AV.Cloud.define('basicErrorCode', function (req, res) {
@@ -26,7 +26,7 @@ AV.Cloud.define('basicErrorCode', function (req, res) {
 });
 
 AV.Cloud.define('customErrorCode', function (req, res) {
-  res.error({code: 123, message: 'custom error message'});
+	res.error({code: 123, message: 'custom error message'});
 });
 
 AV.Cloud.define('fetchObject', function (req, res) {
