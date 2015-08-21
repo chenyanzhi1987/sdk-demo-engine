@@ -8,6 +8,8 @@
 * 如何把 AVObject 对象传递给客户端？
 * 如何用 beforeSave Hook？
 
+核心代码为 [cloud.js](https://github.com/leancloud/sdk-demo-engine/blob/master/cloud.js) 。
+
 
 云引擎介绍：
 
