@@ -13,6 +13,10 @@ AV.Cloud.define('hello', function (request, response) {
     response.success('Hello world!');
 });
 
+AV.Cloud.define('echoError', function (request, response) {
+    response.error(request.params);
+});
+
 AV.Cloud.define('errorCode', function (req, res) {
     AV.User.logIn('NoThisUser', 'lalala', {
         error: function (user, err) {
