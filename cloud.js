@@ -17,6 +17,10 @@ AV.Cloud.define('echoError', function (request, response) {
     response.error(request.params);
 });
 
+AV.Cloud.define('echoSuccess', function (request, response) {
+    response.success(request.params);
+});
+
 AV.Cloud.define('errorCode', function (req, res) {
     AV.User.logIn('NoThisUser', 'lalala', {
         error: function (user, err) {
